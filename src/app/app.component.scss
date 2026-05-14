@@ -1,0 +1,235 @@
+// Variables
+$bg-color: #0f172a; // Deep slate dark mode
+$surface-color: #1e293b;
+$text-primary: #f8fafc;
+$text-secondary: #94a3b8;
+$accent-color: #10b981; // Modern green
+$font-stack: 'Inter', system-ui, -apple-system, sans-serif;
+
+// Global & Reset Scope for Component
+:host {
+  display: block;
+  font-family: $font-stack;
+  background-color: $bg-color;
+  color: $text-primary;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+// Typography
+h1, h2, h3, h4 {
+  margin: 0;
+  color: $text-primary;
+  font-weight: 700;
+}
+
+p {
+  color: $text-secondary;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+// General Section Styling
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: $surface-color;
+    margin-left: 20px;
+  }
+}
+
+// Buttons
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: $accent-color;
+  border: 1px solid $accent-color;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(#10b981, 0.1);
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  color: $text-primary;
+  font-weight: 600;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba($bg-color, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $accent-color;
+  }
+
+  .nav-links a {
+    color: $text-primary;
+    margin-left: 30px;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+
+  .hero-subtitle {
+    color: $accent-color;
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  .hero-headline {
+    font-size: 3.5rem;
+    color: $text-secondary;
+    margin-bottom: 30px;
+  }
+
+  .hero-description {
+    max-width: 500px;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+// Skills Section
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  .skill-chip {
+    background-color: $surface-color;
+    color: $accent-color;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+}
+
+// Projects Section
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: $surface-color;
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: $accent-color;
+  }
+
+  .project-link {
+    margin-top: 25px;
+    display: inline-block;
+    color: $text-primary;
+    font-weight: 600;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Contact & Footer
+.contact-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .section-title {
+    justify-content: center;
+    &::after { display: none; }
+  }
+
+  p {
+    margin-bottom: 40px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: $text-secondary;
+}
