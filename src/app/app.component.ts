@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { MatrixBackgroundComponent } from './matrix-background/matrix-background.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatrixBackgroundComponent],
+  imports: [CommonModule, MatrixBackgroundComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -13,10 +13,9 @@ export class AppComponent {
   // Replace these with your actual details
   name = 'Alessio Cerullo';
   role = 'Cyber Security Specialist';
-  aboutText = 'I build accessible, responsive, and highly performant web applications. Currently focused on Angular and modern web technologies.';
-
+  aboutText = 'I protect digital infrastructures, assess vulnerabilities, and build security strategies that keep organizations one step ahead of threats. Specialized in penetration testing, risk management, and security consulting.';
   skills = [
-    'Angular', 'TypeScript', 'SCSS', 'Node.js', 'Express', 'Git', 'Figma'
+    'Wireshark', 'NMap', 'Burp Suite', 'Angular' , 'Git', 'Java', 'C'
   ];
 
   projects = [
@@ -27,9 +26,9 @@ export class AppComponent {
       link: 'https://github.com/yourusername/project1'
     },
     {
-      title: 'Task Management Dashboard',
-      description: 'A productivity app featuring drag-and-drop boards, real-time updates, and dark mode.',
-      techStack: ['Angular', 'RxJS', 'Firebase', 'Tailwind'],
+      title: 'Triangle Solver',
+      description: 'A application that solves ',
+      techStack: ['Java', 'Github', 'Firebase', 'Tailwind'],
       link: 'https://github.com/yourusername/project2'
     },
     {

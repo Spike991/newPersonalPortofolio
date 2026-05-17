@@ -10,10 +10,24 @@ $font-stack: 'Inter', system-ui, -apple-system, sans-serif;
 :host {
   display: block;
   font-family: $font-stack;
-  background-color: $bg-color;
-  color: $text-primary;
+
+    background-color: transparent;  color: $text-primary;
   min-height: 100vh;
   line-height: 1.6;
+}
+
+// Could potentially lag a little bit
+main {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.hero-content {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 40px;
 }
 
 // Typography
@@ -232,4 +246,128 @@ footer {
   font-family: monospace;
   font-size: 0.8rem;
   color: $text-secondary;
+}
+
+// Hero-Section: zweispaltig machen
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // GEÄNDERT
+  gap: 40px;                       // NEU
+
+  // ... deine bestehenden Styles bleiben
+}
+
+// Foto-Wrapper
+.hero-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  height: 320px;
+}
+
+.hero-image-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(#10b981, 0.4);
+  border-radius: 4px;
+  position: relative;
+
+  img.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: grayscale(20%) contrast(1.05);
+    transition: filter 0.4s ease;
+
+    &:hover {
+      filter: grayscale(0%) contrast(1.1);
+    }
+  }
+}
+
+// Scan-Line Effekt
+.scan-line {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    transparent,
+    rgba(#10b981, 0.6),
+    transparent
+  );
+  animation: scan 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0%   { top: -5%; }
+  100% { top: 105%; }
+}
+
+// Tech-Ecken
+.frame-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: $accent-color;
+  border-style: solid;
+
+  &.top-left     { top: -2px; left: -2px;  border-width: 2px 0 0 2px; }
+  &.top-right    { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+  &.bottom-left  { bottom: -2px; left: -2px;  border-width: 0 0 2px 2px; }
+  &.bottom-right { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+}
+
+// Status-Label
+.frame-label {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: $accent-color;
+  letter-spacing: 2px;
+  white-space: nowrap;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: $accent-color;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    animation: blink 1.5s ease infinite;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+// Mobile: untereinander
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    width: 200px;
+    height: 230px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
 }
