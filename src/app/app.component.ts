@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { MatrixBackgroundComponent } from './matrix-background/matrix-background.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatrixBackgroundComponent],
+  imports: [CommonModule, MatrixBackgroundComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -13,30 +13,29 @@ export class AppComponent {
   // Replace these with your actual details
   name = 'Alessio Cerullo';
   role = 'Cyber Security Specialist';
-  aboutText = 'I build accessible, responsive, and highly performant web applications. Currently focused on Angular and modern web technologies.';
-
+  aboutText = 'I protect digital infrastructures, assess vulnerabilities, and build security strategies that keep organizations one step ahead of threats. Specialized in penetration testing, risk management, and security consulting.';
   skills = [
-    'Angular', 'TypeScript', 'SCSS', 'Node.js', 'Express', 'Git', 'Figma'
+    'Security Management', 'Entrepreneur', 'Software Engineering', 'Cyber Security', 'IT Consulting'
   ];
 
   projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A fully responsive online store built with Angular and a Node.js backend. Features SSR for SEO optimization.',
-      techStack: ['Angular', 'Express', 'MongoDB', 'SCSS'],
-      link: 'https://github.com/yourusername/project1'
+      title: 'Git Management Infrastructure project',
+      description: 'A repository management system that allows users to manage their Git repositories efficiently.',
+      techStack: ['Shell', 'Bash', 'Git'],
+      link: 'https://github.com/Spike991/Git_Workflow_Infrastructure'
     },
     {
-      title: 'Task Management Dashboard',
-      description: 'A productivity app featuring drag-and-drop boards, real-time updates, and dark mode.',
-      techStack: ['Angular', 'RxJS', 'Firebase', 'Tailwind'],
-      link: 'https://github.com/yourusername/project2'
+      title: 'Triangle Solver',
+      description: 'A application that calculates how many blocks it takes to build an triangle. ',
+      techStack: ['Java'],
+      link: 'https://github.com/Spike991/TriangleSolver'
     },
     {
-      title: 'Personal Portfolio',
-      description: 'A fast, minimalist portfolio website using Angular Server-Side Rendering.',
-      techStack: ['Angular', 'SCSS', 'Vite'],
-      link: 'https://github.com/yourusername/project3'
+      title: 'Hackathons and CTFs Experience Lists',
+      description: "It's a list about all the CTFs and Hackathons I've participated in.",
+      techStack: ['Kali Linux', 'Cryptography', 'Web-Security', 'IT-Forensics', 'Reverse-Engineering', 'Binary Exploitation', 'AI-Security'],
+      link: 'https://github.com/Spike991/Hackathon_CTFs_List'
     }
   ];
 }
