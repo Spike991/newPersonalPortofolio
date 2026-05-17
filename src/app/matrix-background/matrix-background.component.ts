@@ -75,7 +75,7 @@ export class MatrixBackgroundComponent implements OnDestroy {
 
     // 1. Hintergrund leicht transparent schwarz übermalen
     // Das erzeugt den "Schweif"-Effekt der fallenden Zeichen
-    this.ctx.fillStyle = 'rgba(15, 23, 42, 0.05)'; // Nutze die Hintergrundfarbe deines Portfolios (#0f172a)
+    this.ctx.fillStyle = 'rgba(15, 23, 42, 0.03)'; // Nutze die Hintergrundfarbe deines Portfolios (#0f172a)
     this.ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // 2. Grüne Zeichen zeichnen
