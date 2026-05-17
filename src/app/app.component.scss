@@ -16,11 +16,14 @@ $font-stack: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
 }
 
+/*
 // Could potentially lag a little bit
 main {
   background: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(2px);
 }
+*/
+
 
 .hero-content {
   background: rgba(15, 23, 42, 0.6);
@@ -28,6 +31,22 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 40px;
+}
+
+.contact-section {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 40px;
+}
+
+
+.skills-section {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
 }
 
 // Typography
