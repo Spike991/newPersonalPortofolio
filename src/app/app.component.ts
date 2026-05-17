@@ -15,27 +15,27 @@ export class AppComponent {
   role = 'Cyber Security Specialist';
   aboutText = 'I protect digital infrastructures, assess vulnerabilities, and build security strategies that keep organizations one step ahead of threats. Specialized in penetration testing, risk management, and security consulting.';
   skills = [
-    'Wireshark', 'NMap', 'Burp Suite', 'Angular' , 'Git', 'Java', 'C'
+    'Security Management', 'Entrepreneur', 'Software Engineering', 'Cyber Security', 'IT Consulting'
   ];
 
   projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A fully responsive online store built with Angular and a Node.js backend. Features SSR for SEO optimization.',
-      techStack: ['Angular', 'Express', 'MongoDB', 'SCSS'],
-      link: 'https://github.com/yourusername/project1'
+      title: 'Git Management Infrastructure project',
+      description: 'A repository management system that allows users to manage their Git repositories efficiently.',
+      techStack: ['Shell', 'Bash', 'Git'],
+      link: 'https://github.com/Spike991/Git_Workflow_Infrastructure'
     },
     {
       title: 'Triangle Solver',
-      description: 'A application that solves ',
-      techStack: ['Java', 'Github', 'Firebase', 'Tailwind'],
-      link: 'https://github.com/yourusername/project2'
+      description: 'A application that calculates how many blocks it takes to build an triangle. ',
+      techStack: ['Java'],
+      link: 'https://github.com/Spike991/TriangleSolver'
     },
     {
-      title: 'Personal Portfolio',
-      description: 'A fast, minimalist portfolio website using Angular Server-Side Rendering.',
-      techStack: ['Angular', 'SCSS', 'Vite'],
-      link: 'https://github.com/yourusername/project3'
+      title: 'Hackathons and CTFs Experience Lists',
+      description: "It's a list about all the CTFs and Hackathons I've participated in.",
+      techStack: ['Kali Linux', 'Cryptography', 'Web-Security', 'IT-Forensics', 'Reverse-Engineering', 'Binary Exploitation', 'AI-Security'],
+      link: 'https://github.com/Spike991/Hackathon_CTFs_List'
     }
   ];
 }
